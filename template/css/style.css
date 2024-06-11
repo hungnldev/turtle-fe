@@ -1,0 +1,193 @@
+/* Thêm hoặc cập nhật phần này vào CSS hiện có */
+
+html, body {
+    position: relative;height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+
+    color: #fff;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+
+}
+
+.wrapper{
+    height:100%;
+}
+.container {
+    grid-row: 2; /* Nội dung sẽ ở hàng thứ 2 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    height:100%;
+    background-color: #1e1f24;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #070601;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-img {
+    width: 80px;
+}
+.content {
+    flex: 1;
+    text-align: center;
+    background-color: #1e1f24; /* Màu nền cho khung */
+
+}
+
+.stats-container {
+    position: relative;
+    padding-top: 10px;
+}
+
+/*.content::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 20px;*/
+/*    background: linear-gradient(to top, #000, #FFD700); !* Gradient từ đen đến vàng *!*/
+/*    border-top-left-radius: 10px; !* Bo góc bên trái *!*/
+/*    border-top-right-radius: 10px; !* Bo góc bên phải *!*/
+/*}*/
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #272a2f; /* Màu nền cho khung */
+    border-radius: 15px; /* Bo góc cho khung */
+    padding: 10px 20px; /* Khoảng cách bên trong khung */
+    margin: 5px; /* Khoảng cách giữa các khung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng đổ bóng */
+    font-size: 0.5em; /* Giảm cỡ chữ chung */
+    width: auto; /* Đặt chiều rộng tự động */
+    min-width: 80px; /* Chiều rộng tối thiểu cho khung */
+}
+
+.main-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin-info {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.coins {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    width: 40%; /* Example fill percentage */
+    height: 100%;
+    background-color: #4caf50;
+}
+
+.character-img {
+    width: 150px;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.energy, .boost {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.boost span {
+    margin-left: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    position: sticky;
+    bottom: 0;
+    background-color: #272a2f; /* Đảm bảo màu nền */
+    z-index: 10; /* Đảm bảo footer ở trên cùng */
+    margin-top: auto; /* Đẩy footer xuống dưới cùng */
+   border-radius: 10px; /* Bo góc cho footer */
+}
+
+
+.nav-item {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 40px;
+    }
+
+    .character-img {
+        width: 200px;
+    }
+}
